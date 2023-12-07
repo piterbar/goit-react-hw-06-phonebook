@@ -38,15 +38,17 @@ export const SubmitButton = styled.button`
   display: flex;
   justify-content: center;
   width: 140px;
-  padding: 10px;
-  color: #333;
-  background-color: #e6e6e6;
-  border: 1px solid #ccc;
-  border-radius: 0;
-  :hover,
-  :focus {
-    color: white;
-    background-color: #999;
-    border-color: #999;
+  padding: ${p => p.theme.space[2]}px;
+  color: ${p => p.theme.colors.white};
+  background-color: ${p => p.theme.colors.primary};
+  border: none;
+  border-radius: ${p => p.theme.radii.normal};
+  box-shadow: 0 4px ${p => p.theme.colors.secondary};
+  cursor: pointer;
+  outline: none;
+  :active {
+    box-shadow: 0 2px ${p => p.theme.colors.secondary};
+    transform: translateY(2px);
   }
 `;
+
